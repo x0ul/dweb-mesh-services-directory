@@ -66,5 +66,12 @@ def index():
     zc_services.sort(key=(lambda d: d["desc"]))
 
     #return services
+    s_services = [
+        {"desc": "cowmesh", "uri": "http://10.233.233.101"},
+        {"desc": "meshmini", "uri": "http://10.233.233.100"},
+        {"desc": "swarm", "uri": "http://10.233.233.61"},
+        {"desc": "terrastories: ", "uri": "http://10.233.233.123"},
+        {"desc": "voidmesh: Talks From A New HOPE ", "uri": "http://10.233.179.50"},
+    ]
     # TODO static services imported from file
-    return render_template('zeroconf_dir.html', zeroconf_services=zc_services, static_services=[])
+    return render_template('zeroconf_dir.html', zeroconf_services=zc_services, static_services=s_services)

@@ -25,10 +25,11 @@
 </head>
 <body>
 <div>
-<h1>mesh services at dweb camp 2022</h1>
+<h1>Dweb 2022 Mesh Portal</h1>
 
+<p>Welcome to Dweb Mesh playground.</p>
 {% if zeroconf_services %}
-the following services are advertised via zeroconf
+<p>The following local services are advertised via zeroconf</p>
   <ul>
 {% for service in zeroconf_services %}
   <li>
@@ -39,18 +40,18 @@ the following services are advertised via zeroconf
 {% endif %}
 
 {% if static_services %}
-the following services are manually added
+<p>The following services are manually added</p>
   <ul>
 {% for service in static_services %}
   <li>
-  <a href="{{ service['uri'] }}">{{ service['desc'] }}</a>
+  <a target="_blank" href="{{ service['uri'] }}">{{ service['desc'] }}</a>
   </li>
 {% endfor %}
   </ul>
 {% endif %}
 
 <p>
-interested in getting your service here? come talk to the mesh people upstairs in hacker's hall!
+Interested in getting your service here? Come talk to the mesh people upstairs in hacker's hall!</p>
 </div>
 </body>
 </html>
